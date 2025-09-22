@@ -1,0 +1,47 @@
+.header {
+    &__wrapper {
+        padding: 2rem;
+        width: 85%;
+        margin: 0 auto;
+        align-items: center;
+        border-bottom: 1px solid #D9D9D9;
+        display: flex;
+        justify-content: space-between;
+
+        &-image {
+            width: 250px;
+        }
+
+        &__section {
+            gap: 2rem;
+            display: flex;
+            &-links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &-signin {
+                display: flex;
+                gap: 1rem;
+
+                .signin {
+                    background-color: #e3e3e3;
+                    padding: 0.5rem; 
+                    background: #E3E3E3; 
+                    border: 1px solid #767676; 
+                    border-radius: 8px;
+                }
+
+                .register {
+                    background-color: #2c2c2c;
+                    padding: 0.5rem; 
+                    background: #2c2c2c; 
+                    border: 1px solid #767676; 
+                    border-radius: 8px;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}
