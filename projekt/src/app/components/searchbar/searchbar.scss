@@ -17,3 +17,16 @@ border-radius: 21px;
 height: 100%;
 }
 }
+
+.search-container {
+      width: 75%;
+margin: 0 auto;
+padding: 2rem 2rem 0 0;
+
+input {
+      padding: 0.75rem;
+      border-radius: 21px;
+      width: 400px;
+      border: 1px solid black;
+}
+}

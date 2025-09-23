@@ -27,10 +27,10 @@ export default function Header() {
 
  <ul className="header__wrapper__section-signin">
     <li>
-        <Link href="" className="signin">Sign in</Link>
+        <Link href="/login" className="signin">Sign in</Link>
     </li>
     <li>
-        <Link href="" className="register">Register</Link>
+        <Link href="/register" className="register">Register</Link>
     </li>
  </ul>   
    </section>

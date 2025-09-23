@@ -7,7 +7,7 @@ export default function Logo() {
     return (
         <Link href="/">
           <div className="logo-wrap">
-            <Image src={logo} />
+            <Image src={logo} alt="Logo"/>
             <p>SwapHub</p>
           </div>
         </Link>

@@ -35,7 +35,7 @@ function SearchBar() {
             {filtered.length > 0 ? (
                 <ul className='listing-wrapper'>
                     {filtered.map((listing) => (
-                        <Link href={`/listings/${listing.id}`}>
+                        <Link key={listing.id} href={`/listings/${listing.id}`}>
                             <li className='ListingCard__li'>
                                 <Image src={listing.asset.url} width={350} height={340} alt={listing.title}></Image>
                                 <div className="text-container"> 
