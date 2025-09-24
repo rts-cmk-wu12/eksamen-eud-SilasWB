@@ -6,7 +6,7 @@ import { NextResponse } from "next/server"
 
 export default async function middelware(request) {
 
-     const cookie = request.cookies.get("auth_token", "Locked in")
+     const cookie = request.cookies.get("login", "success")
 
      if (!cookie) {
         return NextResponse.redirect(new URL("/", request.url));

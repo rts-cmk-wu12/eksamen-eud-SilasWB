@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import z from "zod";
 
@@ -11,10 +10,10 @@ export default async function createUserForm(prevState, formData) {
 	const lastname = formData.get("lastname");
 
 	const schema = z.object({
-		email: z.string().min(1, { message: "Navn skal være udfyldt" }).max(50, { message: "Navnet er for langt. Maks 50 tegn." }),
-		password: z.string().min(1, { message: "password skal være udfyldt" }),
-		firstname: z.string().min(1, { message: "Dej skal være udfyldt" }),
-		lastname: z.string().min(1, { message: "Glasur skal være udfyldt" }),
+		email: z.string().min(1, { message: "Email not filled out" }),
+		password: z.string().min(1, { message: "Password not filled out" }),
+		firstname: z.string().min(1, { message: "FirstName not filled out" }),
+		lastname: z.string().min(1, { message: "LastName not filled out" }),
 	});
 
 	const validated = schema.safeParse({
@@ -49,7 +48,5 @@ export default async function createUserForm(prevState, formData) {
 		errors: ["Something went wrong on the server try again later"]
 	}
 
-	revalidatePath("http://localhost:3000/abc");
-console.log("success")
 	return await response.json();
 }

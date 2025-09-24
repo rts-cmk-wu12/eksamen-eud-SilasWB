@@ -15,13 +15,13 @@ export default function Header() {
    <section className="header__wrapper__section">
     <ul className="header__wrapper__section-links">
     <li>
-       <Link href="">Listing</Link> 
+       <Link href="/">Listing</Link> 
     </li>
     <li>
-       <Link href="">Community</Link> 
+       <Link href="/">Community</Link> 
     </li>
     <li>
-        <Link href="">Contact</Link> 
+        <Link href="./contact">Contact</Link> 
     </li>
  </ul>
 
@@ -30,7 +30,7 @@ export default function Header() {
         <Link href="/login" className="signin">Sign in</Link>
     </li>
     <li>
-        <Link href="/register" className="register">Register</Link>
+        <Link href="/register" className="register-btn">Register</Link>
     </li>
  </ul>   
    </section>

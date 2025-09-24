@@ -1,7 +1,9 @@
 // Taget fra tidligere projekt
 import Footer from "@/app/components/footer";
+import Header from "@/app/components/header";
 // import "./aktiviterdetail.scss"
 import Image from "next/image";
+import "./listingdetail.scss";
 
 export async function generateMetadata({ params }) {
     const { id } = await params;
@@ -25,15 +27,16 @@ console.log(json)
 
     return (
         <>
-        <section className="aktivitetDetail">
-            <div className="aktivitetDetail__image-wrapper">
-        <Image src={json.asset.url} width={200} height={100} alt={json.id} priority></Image>
-        <button>Tilmeld</button>
+        <Header />
+        <section className="listingDetail">
+            <div className="listingDetail__image-wrapper">
+        <Image src={json.asset.url} width={415} height={415} alt={json.id} priority></Image>
 </div>
-<div className="aktivitetDetail__layout">
-            <h2>{json.name}</h2>
-                <span>{json.minAge}-{json.maxAge}</span>
+<div className="listingDetail__layout">
+            <h2>{json.title}</h2>
             <p>{json.description}</p>
+            <p>On SwapHub since: {json.createdAt.slice(0,10)}</p>
+            <button>Propose a swap</button>
             </div>
             </section>
 

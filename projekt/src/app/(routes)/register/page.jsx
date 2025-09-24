@@ -8,7 +8,7 @@ export default function Register() {
         <>
 <Header />
 <main>
-    <h1>Create your own user</h1>
+    <h1 className="register__headline">Create your own user</h1>
    <CreateUserForm />
 </main>
 <Footer />

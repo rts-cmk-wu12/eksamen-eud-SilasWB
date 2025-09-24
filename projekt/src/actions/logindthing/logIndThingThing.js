@@ -63,10 +63,13 @@ console.log("user:", user);
 
 	if (userresponse.ok) {
 		const cookieStore = await cookies();
-		cookieStore.set("auth_token", "Locked in", {
+		cookieStore.set("auth_token", token, {
 			maxAge: 60 * 60
 		},
 		cookieStore.set("userid", userId), {
+			maxAge: 60 * 60
+		},
+		cookieStore.set("login", "success"), {
 			maxAge: 60 * 60
 		},
 );
