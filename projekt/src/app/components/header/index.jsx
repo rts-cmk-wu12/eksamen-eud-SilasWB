@@ -1,9 +1,14 @@
-
+"use server"
 import "./header.scss"
 import Image from "next/image"
 import Link from "next/link"
 import Logo from "../logo"
-export default function Header() {
+import { cookies } from "next/headers"
+import ButtonModRemover from "@/actions/buttonModifyer/button"
+
+
+export default async function Header() {
+const cookieStore = await cookies();
 
     return ( 
           <>
@@ -24,8 +29,18 @@ export default function Header() {
         <Link href="./contact">Contact</Link> 
     </li>
  </ul>
-
- <ul className="header__wrapper__section-signin">
+{ cookieStore.get("auth_token") && cookieStore.get("userid") || cookieStore.get("login") && cookieStore.get("userid") ? (
+       <ul className="header__wrapper__section-signin">
+    <li>
+        <Link href={"/"} onClick={ButtonModRemover}  className="signin">Log out</Link>
+    </li>
+    <li>
+        <Link href="/profile" className="register-btn">Profile</Link>
+    </li>
+ </ul> 
+ 
+)  : (
+    <ul className="header__wrapper__section-signin">
     <li>
         <Link href="/login" className="signin">Sign in</Link>
     </li>
@@ -33,6 +48,11 @@ export default function Header() {
         <Link href="/register" className="register-btn">Register</Link>
     </li>
  </ul>   
+)
+}
+
+
+
    </section>
     </nav>
     </header>

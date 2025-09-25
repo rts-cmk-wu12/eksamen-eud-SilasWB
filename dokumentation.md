@@ -1,6 +1,6 @@
 # Opgavetitel
-Dit navn
+Dit navn : Silas
 
-Hold nr.
+Hold nr. : WU12
 
-Valgfri opgave:
+Valgfri opgave: Opgave C
