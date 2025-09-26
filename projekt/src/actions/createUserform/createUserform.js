@@ -1,6 +1,5 @@
 "use server";
 
-import { cookies } from "next/headers";
 import z from "zod";
 
 export default async function createUserForm(prevState, formData) {
