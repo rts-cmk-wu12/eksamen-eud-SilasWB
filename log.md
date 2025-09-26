@@ -23,5 +23,5 @@ Skriv dit sluttidspunkt her og commit/push til GitHub:
 15:00
 ## Dag 5
 Skriv dit starttidspunkt her og commit/push til GitHub: 
-
+10:25
 Skriv dit sluttidspunkt her og commit/push til GitHub: 
